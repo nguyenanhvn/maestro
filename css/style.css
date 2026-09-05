@@ -1280,9 +1280,6 @@ main {
   -o-object-position: center;
      object-position: center;
 }
-.sbanner .swiper {
-  /* If we need pagination */
-}
 .sbanner .swiper .swiper-pagination {
   bottom: 50px;
   display: flex;
@@ -4236,7 +4233,7 @@ main {
 }
 .dproject .box-content {
   display: grid;
-  grid-template-columns: 412px 1fr;
+  grid-template-columns: 500px 1fr;
   grid-gap: 24px;
   align-items: center;
   justify-content: space-between;
@@ -4571,9 +4568,6 @@ main {
   }
 }
 
-.projects .child {
-  border-bottom: 2px solid #BB822C;
-}
 .projects .child-label {
   display: grid;
   grid-template-columns: repeat(2, minmax(10px, 1fr));
@@ -4588,7 +4582,7 @@ main {
   align-items: center;
   min-height: 360px;
   padding: 50px;
-  background: linear-gradient(270deg, #FFFFFF 0%, #EFE7DF 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #EFE7DF 100%);
 }
 @media (max-width: 992px) {
   .projects .child-label .label--left {
@@ -4628,7 +4622,7 @@ main {
 .projects .child-label .label--text {
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 150%;
   color: #000000;
 }
@@ -4742,7 +4736,7 @@ main {
   }
 }
 .projects .child-list .list--items .item--area {
-  padding: 0 50px;
+  padding: 0 40px;
   width: 100%;
 }
 @media (max-width: 992px) {
