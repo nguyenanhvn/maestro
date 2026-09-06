@@ -255,6 +255,7 @@ $(document).ready(function () {
             },
         });
 
+
         function fixMemberHeightAndCaption() {
             var maxMemberHeight = 0;
 
@@ -325,6 +326,38 @@ $(document).ready(function () {
                 1500: {
                     slidesPerView: 6,
                     spaceBetween: 5,
+                },
+            },
+        });
+
+        new Swiper(".pgicons .swiper", {
+            slidesPerView: 6,
+            spaceBetween: 5,
+            speed: 2000,
+            loop: true,
+            autoplay: {
+                delay: sliderTime * 1000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".pgicons .swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                300: {
+                    slidesPerView: 2,
+                },
+                600: {
+                    slidesPerView: 4,
+                },
+                850: {
+                    slidesPerView: 5,
+                },
+                1200: {
+                    slidesPerView: 5,
                 },
             },
         });

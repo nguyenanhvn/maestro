@@ -202,6 +202,43 @@ img {
   }
 }
 
+.tk-obtn {
+  padding: 11px 23px;
+  min-width: 175px;
+  background: #FFFFFF;
+  border: 1px solid #BB822C;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #BB822C;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.tk-obtn:hover arrow {
+  right: -4px;
+}
+@media (max-width: 1200px) {
+  .tk-obtn {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
+@media (max-width: 767px) {
+  .tk-obtn {
+    font-size: 13px;
+  }
+}
+.tk-obtn arrow {
+  transition: all 0.3s ease;
+  position: relative;
+  right: 0;
+}
+.tk-obtn span {
+  transition: all 0.3s ease;
+}
+
 .tk-primary {
   background: #BB822C;
   outline: none;
@@ -227,6 +264,15 @@ img {
 
 .tk-tcenter {
   text-align: center;
+}
+
+.tk-p80 {
+  padding: 80px 0;
+}
+@media (max-width: 992px) {
+  .tk-p80 {
+    padding: 60px 0;
+  }
 }
 
 .tk-form {
@@ -2312,7 +2358,7 @@ main {
 }
 @media (max-width: 767px) {
   .hproduct .box .box-items .item--caption .item--text {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 .hproduct .box .box-actions {
@@ -5307,6 +5353,364 @@ main {
   .fprojects .box-filter .filter--slider .swiper-button-prevs svg {
     width: 40px;
   }
+}
+
+.pgrid2 {
+  background: url(../images/bg-pdetail2.png) center bottom/contain no-repeat;
+}
+.pgrid2 .box {
+  display: grid;
+  grid-template-columns: 1fr 620px;
+  grid-gap: 50px;
+}
+@media (max-width: 1200px) {
+  .pgrid2 .box {
+    grid-template-columns: repeat(2, minmax(10px, 1fr));
+    grid-gap: 30px;
+  }
+}
+@media (max-width: 992px) {
+  .pgrid2 .box {
+    grid-template-columns: 1fr;
+  }
+}
+.pgrid2 .box-left img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.pgrid2 .box-small {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 112%;
+  text-transform: uppercase;
+  color: #000000;
+}
+@media (max-width: 1200px) {
+  .pgrid2 .box-small {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .pgrid2 .box-small {
+    font-size: 13px;
+  }
+}
+.pgrid2 .box-name {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 72px;
+  line-height: 112%;
+  color: #BB822C;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+@media (max-width: 1200px) {
+  .pgrid2 .box-name {
+    font-size: 54px;
+  }
+}
+@media (max-width: 767px) {
+  .pgrid2 .box-name {
+    font-size: 46px;
+    margin-top: 10px;
+  }
+}
+.pgrid2 .box-gray {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 112%;
+  letter-spacing: 5px;
+  color: #BABABA;
+  margin-top: 15px;
+}
+@media (max-width: 1200px) {
+  .pgrid2 .box-gray {
+    font-size: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .pgrid2 .box-gray {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+.pgrid2 .box-text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #000000;
+  margin-top: 25px;
+}
+@media (max-width: 1200px) {
+  .pgrid2 .box-text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .pgrid2 .box-text {
+    font-size: 13px;
+    margin-top: 15px;
+  }
+}
+.pgrid2 .box-top {
+  padding: 0 35.5px;
+}
+@media (max-width: 992px) {
+  .pgrid2 .box-top {
+    padding: 0;
+  }
+}
+.pgrid2 .box-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+  padding: 20px 10px;
+  background: #fff;
+  list-style: none;
+  margin: 45px 0 0;
+}
+@media (max-width: 450px) {
+  .pgrid2 .box-list {
+    grid-template-columns: repeat(2, minmax(10px, 1fr));
+    grid-gap: 12px 0;
+    margin: 25px 0 0;
+  }
+}
+.pgrid2 .box-list li {
+  display: grid;
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.pgrid2 .box-list li > div {
+  display: grid;
+  grid-gap: 10px;
+}
+.pgrid2 .box-list li img {
+  max-width: 58px;
+  margin: auto;
+}
+@media (max-width: 450px) {
+  .pgrid2 .box-list li img {
+    max-width: 44px;
+  }
+}
+.pgrid2 .box-list li span {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: center;
+  color: #BB822C;
+}
+@media (max-width: 1200px) {
+  .pgrid2 .box-list li span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .pgrid2 .box-list li span {
+    font-size: 13px;
+  }
+}
+@media (max-width: 450px) {
+  .pgrid2 .box-list li:nth-child(odd) {
+    border: 0;
+  }
+}
+.pgrid2 .box-list li + li {
+  border-left: 1px solid #EFE7DF;
+}
+
+.pgicons {
+  background: url(../images/bg-icons.jpg) center/cover no-repeat;
+}
+.pgicons .box-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+  padding: 20px 10px;
+  margin: 30px 0 0;
+  list-style: none;
+}
+@media (max-width: 1200px) {
+  .pgicons .box-icons {
+    display: none;
+  }
+}
+.pgicons .box-icons li {
+  padding: 10px 25px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.pgicons .box-icons li > div {
+  display: grid;
+  grid-gap: 20px;
+}
+.pgicons .box-icons li + li {
+  border-left: 1px solid #BB822C;
+}
+.pgicons .box-icons li img {
+  height: 101px;
+  width: auto;
+  margin: auto;
+}
+.pgicons .box-icons li span {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 125%;
+  text-align: center;
+  color: #0B0202;
+}
+.pgicons .box-slider {
+  margin: 30px 0 0;
+  list-style: none;
+  display: none;
+}
+@media (max-width: 1200px) {
+  .pgicons .box-slider {
+    display: block;
+  }
+}
+.pgicons .box-slider .swiper-pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  z-index: 99;
+}
+.pgicons .box-slider .swiper-pagination .swiper-pagination-bullet {
+  background: #BB822C;
+  opacity: 0.25;
+  width: 75px;
+  height: 3px;
+  border-radius: 0;
+}
+@media (max-width: 992px) {
+  .pgicons .box-slider .swiper-pagination .swiper-pagination-bullet {
+    width: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .pgicons .box-slider .swiper-pagination .swiper-pagination-bullet {
+    width: 30px;
+  }
+}
+.pgicons .box-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 0.5;
+}
+.pgicons .box-slider .item {
+  padding: 10px 15px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.pgicons .box-slider .item > div {
+  display: grid;
+  grid-gap: 20px;
+}
+.pgicons .box-slider .item img {
+  height: 90px;
+  width: auto;
+  margin: auto;
+}
+@media (max-width: 767px) {
+  .pgicons .box-slider .item img {
+    height: 60px;
+  }
+}
+.pgicons .box-slider .item span {
+  text-align: center;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 125%;
+  text-align: center;
+  color: #0B0202;
+}
+@media (max-width: 767px) {
+  .pgicons .box-slider .item span {
+    font-size: 13px;
+  }
+}
+
+.pfeat {
+  background: #fff;
+  padding: 80px 0 120px;
+}
+@media (max-width: 992px) {
+  .pfeat {
+    padding: 60px 0 80px;
+  }
+}
+.pfeat .box-top {
+  display: flex;
+  justify-content: space-between;
+}
+.pfeat .box-items {
+  margin: 30px 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+  grid-gap: 15px;
+}
+.pfeat .box-items .item {
+  background: url(../images/bg-stone.png) center bottom/cover no-repeat;
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+}
+.pfeat .box-items .item--img {
+  height: 0;
+  padding-top: 110%;
+  position: relative;
+}
+.pfeat .box-items .item--img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.pfeat .box-items .item--caption {
+  padding: 20px;
+  position: relative;
+  min-height: 180px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex: 1;
+  flex-direction: column;
+}
+.pfeat .box-items .item--name {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 131%;
+  text-transform: capitalize;
+  color: #3D1312;
+}
+.pfeat .box-items .item--finish {
+  border-top: 1px solid #BB822C;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #0B0202;
+  padding: 5px 0 0;
+  margin-top: auto;
+}
+.pfeat .box-items .item--gray {
+  padding-top: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #8F8F8F;
 }
 
 footer {
