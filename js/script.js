@@ -360,8 +360,67 @@ $(document).ready(function () {
                     slidesPerView: 5,
                 },
             },
+        });        
+
+        new Swiper(".pfeat .swiper", {
+            slidesPerView: 6,
+            spaceBetween: 5,
+            speed: 2000,
+            loop: true,
+            autoplay: {
+                delay: sliderTime * 1100,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".pfeat .swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                300: {
+                    slidesPerView: 2,
+                },
+                600: {
+                    slidesPerView: 4,
+                },
+                850: {
+                    slidesPerView: 5,
+                },
+                1200: {
+                    slidesPerView: 5,
+                },
+            },
         });
-        
+                
+
+        new Swiper(".pgallery .swiper", {
+            slidesPerView: 6,
+            spaceBetween: 5,
+            speed: 2000,
+            loop: true,
+            autoplay: {
+                delay: sliderTime * 1100,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".pgallery .swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                450: {
+                    slidesPerView: 2,
+                },
+                1200: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+
         new Swiper(".services .swiper", {
             slidesPerView: 4,
             spaceBetween: 60,
