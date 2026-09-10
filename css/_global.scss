@@ -170,6 +170,30 @@ img {
         text-align: center;
     }
 }
+.tk-stext{
+    font-style: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-black;
+    @media (max-width: 1200px) {
+        font-size: 14px;
+    }
+    @media (max-width: 767px) {
+        font-size: 12px;
+    }
+    &.medium{
+        font-weight: 500;
+    }
+    &.white{
+        color: $color-white;
+    }
+    &.cream{
+        color: $color-cream;
+    }
+    &.center{
+        text-align: center;
+    }
+}
 .tk-btn{
     font-style: normal;
     font-weight: 400;
@@ -569,6 +593,166 @@ img {
                     @media (max-width: 767px) {
                         font-size: 10px;
                         height: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .tk-group-documents{
+        padding-bottom: 10px;
+        @media (max-width: 767px){
+            padding: 0;
+        }
+        .tk-dcheckbox{
+            display: none;
+        }
+        .tk-lcheckbox{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 24px;
+            @media (max-width: 767px){
+                grid-template-columns: 1fr;
+                grid-gap: 18px;
+            }
+            .lcheckbox{
+                min-height: 180px;
+                border: 1px solid transparent;
+                display: grid;
+                grid-template-columns: 164px 1fr;
+                user-select: none;
+                position: relative;
+                cursor: pointer;
+                @include transition;
+                @media (max-width: 767px){
+                    min-height: 0;
+                }
+                &:after{
+                    content: '';
+                    background: linear-gradient(90deg, #FFFFFF 0%, #EFE7DF 100%);
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    opacity: 0.5;
+                    z-index: -1;
+                    @include transition;
+                }
+                &.checked{
+                    &:after{
+                        opacity: 1;
+                    }
+                    .lcheckbox--img{
+                        opacity: 1;
+                    }
+                    border-color: $color-yellow;
+                    .lcheckbox--circle:after{
+                        opacity: 1;
+                        z-index: 2;
+                    }
+                    .lcheckbox--brand{
+                        color: $color-yellow;
+                    }
+                }
+                &--img{
+                    height: 100%;
+                    @include transition();
+                    opacity: 0.5;
+                    position: relative;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+                &--caption{
+                    padding: 20px 25px 60px 35px;
+                    position: relative;
+                    @media (max-width: 1200px){
+                        padding: 20px 25px 50px;
+                    }
+                    p{
+                        margin: 0;
+                    }
+                }
+                &--circle{
+                    position: absolute;
+                    right: 25px;
+                    bottom: 20px;
+                    width: 28px;
+                    height: 28px;
+                    @media (max-width: 1200px){
+                        width: 24px;
+                        height: 24px;
+                        right: 15px;
+                        bottom: 15px;
+                    }
+                    &:before{
+                        content: '';
+                        background: rgba(0, 0, 0, 0.1);
+                        background-blend-mode: plus-darker;
+                        box-shadow: inset 0px -0.5px 1px rgba(255, 255, 255, 0.3), inset 1px 1.5px 4px rgba(0, 0, 0, 0.08);
+                        border-radius: 100px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                    }
+                    &:after{
+                        content: '';
+                        background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGZvcmVpZ25PYmplY3QgeD0iLTQwIiB5PSItNDAiIHdpZHRoPSIxMDgiIGhlaWdodD0iMTA4Ij48ZGl2IHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIiBzdHlsZT0iYmFja2Ryb3AtZmlsdGVyOmJsdXIoMjBweCk7Y2xpcC1wYXRoOnVybCgjYmdibHVyXzFfNDAzNl8zNTk1X2NsaXBfcGF0aCk7aGVpZ2h0OjEwMCU7d2lkdGg6MTAwJSI+PC9kaXY+PC9mb3JlaWduT2JqZWN0PjxnIGRhdGEtZmlnbWEtYmctYmx1ci1yYWRpdXM9IjQwIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQwMzZfMzU5NSkiPgo8cmVjdCB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSIxNCIgZmlsbD0iIzAwOTFGRiIvPgo8cGF0aCBkPSJNMTIuNjkyNCAyMC4xMjM1QzEyLjM1MzggMjAuMTIzNSAxMi4wNjYxIDE5Ljk3NzUgMTEuODI5MSAxOS42ODU1TDguNTQxMDIgMTUuNjM1N0M4LjQ0NzkyIDE1LjUyNTcgOC4zODAyMSAxNS40MTc4IDguMzM3ODkgMTUuMzEyQzguMjk5OCAxNS4yMDYyIDguMjgwNzYgMTUuMDk2MiA4LjI4MDc2IDE0Ljk4MTlDOC4yODA3NiAxNC43MjggOC4zNjU0IDE0LjUxODYgOC41MzQ2NyAxNC4zNTM1QzguNzAzOTQgMTQuMTg4NSA4LjkxNzY0IDE0LjEwNiA5LjE3NTc4IDE0LjEwNkM5LjQ2Nzc3IDE0LjEwNiA5LjcxMzIyIDE0LjIzMDggOS45MTIxMSAxNC40ODA1TDEyLjY2NyAxNy45NzE3TDE4LjA0MzUgOS40NTMxMkMxOC4xNTM1IDkuMjgzODUgMTguMjY3NyA5LjE2NTM2IDE4LjM4NjIgOS4wOTc2NkMxOC41MDQ3IDkuMDI1NzIgMTguNjUyOCA4Ljk4OTc1IDE4LjgzMDYgOC45ODk3NUMxOS4wODg3IDguOTg5NzUgMTkuMzAwMyA5LjA3MDE1IDE5LjQ2NTMgOS4yMzA5NkMxOS42MzA0IDkuMzkxNzYgMTkuNzEyOSA5LjU5NzAxIDE5LjcxMjkgOS44NDY2OEMxOS43MTI5IDkuOTQ4MjQgMTkuNjk2IDEwLjA0OTggMTkuNjYyMSAxMC4xNTE0QzE5LjYyODMgMTAuMjUyOSAxOS41NzU0IDEwLjM1ODcgMTkuNTAzNCAxMC40Njg4TDEzLjU2MiAxOS42NjAyQzEzLjM1ODkgMTkuOTY5MSAxMy4wNjkgMjAuMTIzNSAxMi42OTI0IDIwLjEyMzVaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjk2Ii8+CjwvZz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJiZ2JsdXJfMV80MDM2XzM1OTVfY2xpcF9wYXRoIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MCA0MCkiPjxyZWN0IHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjE0Ii8+CjwvY2xpcFBhdGg+PGNsaXBQYXRoIGlkPSJjbGlwMF80MDM2XzM1OTUiPgo8cmVjdCB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSIxNCIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K) center /cover no-repeat;
+                        opacity: 0;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        @include transition();
+                    }
+                }
+                &--brand{
+                    font-weight: 700;
+                    font-size: 22px;
+                    line-height: 131%;
+                    text-transform: capitalize;
+                    color: $color-gray;
+                    @include transition();
+                    @media (max-width: 1200px){
+                        font-size: 18px;
+                    }
+                    @media (max-width: 767px){
+                        font-size: 15px;
+                    }
+                }
+                &--name{
+                    font-weight: 400;
+                    font-size: 22px;
+                    line-height: 131%;
+                    color: #0B0202;
+                    @media (max-width: 1200px){
+                        font-size: 18px;
+                    }
+                    @media (max-width: 767px){
+                        font-size: 15px;
+                    }
+                }
+                &--gray{
+                    margin-top: 5px;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 130%;
+                    color: #8F8F8F;
+                    @media (max-width: 1200px){
+                        font-size: 14px;
+                    }
+                    @media (max-width: 767px){
+                        font-size: 12px;
                     }
                 }
             }

@@ -5246,6 +5246,9 @@ main {
 .psolutions{
     padding: 60px 0 100px;
     background: url(../images/bg-pdetail2.png) center bottom /contain repeat-x;
+    @media (max-width: 992px){
+        padding: 50px 0 60px;
+    }
     .box{
         max-width: 1490px;
         margin: auto;
@@ -5297,12 +5300,22 @@ main {
             background: #FFFFFF;
             border: 1px solid #BB822C;
             margin-top: 45px;
+            @media (max-width: 1200px){
+                padding: 36px 42px;
+                grid-gap: 30px;
+            }
+            @media (max-width: 600px){
+                grid-template-columns: 1fr;
+            }
             .item{
-                display: grid;
-                grid-gap: 15px;
+                display: flex;
                 align-items: flex-start;
+                &--area{
+                    display: grid;
+                    grid-gap: 15px;
+                }
                 &--img{
-                    height: 111px;
+                    max-height: 111px;
                     width: auto;
                     margin: auto;
                 }
@@ -5313,6 +5326,12 @@ main {
                     text-align: center;
                     text-transform: capitalize;
                     color: #BB822C;
+                    @media (max-width: 1200px) {
+                        font-size: 18px;
+                    }
+                    @media (max-width: 767px) {
+                        font-size: 15px;
+                    }
                 }
                 &--text{
                     font-weight: 500;
@@ -5320,7 +5339,41 @@ main {
                     line-height: 140%;
                     text-align: center;
                     color: #000000;
+                    @media (max-width: 1200px) {
+                        font-size: 13px;
+                    }
+                    @media (max-width: 767px) {
+                        font-size: 12px;
+                    }
                 }
+            }
+        }
+    }
+}
+
+// Section Product Form
+.pform{
+    padding: 80px 0 100px;
+    @media (max-width: 992px){
+        padding: 60px 0 70px;
+    }
+    .box{
+        max-width: 960px;
+        margin: auto;
+        &-top{
+            display: grid;
+            grid-gap: 10px;
+            text-align: center;
+            .box-desc{
+                max-width: 540px;
+                margin: auto;
+            }
+        }
+        &-form{
+            margin-top: 40px;
+            
+            @media (max-width: 1200px){
+                margin-top: 30px;
             }
         }
     }
